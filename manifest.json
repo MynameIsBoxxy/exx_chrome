@@ -1,0 +1,24 @@
+{
+    "name": "Test ex",
+    "description": "booking price",
+    "version": "1.0",
+    "manifest_version": 3,
+    "action" : {
+        "default_popup": "popup.html"
+    },
+    "content_scripts": [
+        {
+            "matches": 
+                ["https://*.booking.com/index.ru.html*"]
+            ,
+            "js": ["content.js"]
+        },
+        {
+            "matches": 
+                ["https://*.booking.com/searchresults.ru.html*"]
+            ,
+            "js": ["content_result.js"]
+        }
+    ],
+    "permissions": ["storage"]
+}
